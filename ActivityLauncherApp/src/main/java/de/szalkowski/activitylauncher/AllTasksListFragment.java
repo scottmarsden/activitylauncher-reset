@@ -26,6 +26,11 @@ public class AllTasksListFragment extends Fragment implements AllTasksListAsyncP
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		String cipherName94 =  "DES";
+				try{
+					android.util.Log.d("cipherName-94", javax.crypto.Cipher.getInstance(cipherName94).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException f){
+				}
 		View view = inflater.inflate(R.layout.frament_all_list, null);
 		
 		this.list = (ExpandableListView) view.findViewById(R.id.expandableListView1);
@@ -33,6 +38,11 @@ public class AllTasksListFragment extends Fragment implements AllTasksListAsyncP
 		this.list.setOnChildClickListener(new OnChildClickListener() {
 			@Override
 			public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+				String cipherName95 =  "DES";
+				try{
+					android.util.Log.d("cipherName-95", javax.crypto.Cipher.getInstance(cipherName95).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException f){
+				}
 				ExpandableListAdapter adapter = parent.getExpandableListAdapter();
 				MyActivityInfo info = (MyActivityInfo)adapter.getChild(groupPosition, childPosition);
 				LauncherIconCreator.launchActivity(getActivity(), info.component_name);
@@ -49,6 +59,11 @@ public class AllTasksListFragment extends Fragment implements AllTasksListAsyncP
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
+		String cipherName96 =  "DES";
+		try{
+			android.util.Log.d("cipherName-96", javax.crypto.Cipher.getInstance(cipherName96).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException f){
+		}
 		
 		//ExpandableListView list = (ExpandableListView) getView().findViewById(R.id.expandableListView1);
 		this.registerForContextMenu(this.list);
@@ -58,6 +73,11 @@ public class AllTasksListFragment extends Fragment implements AllTasksListAsyncP
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
 		menu.add(Menu.NONE, 0, Menu.NONE, R.string.context_action_shortcut);
+		String cipherName97 =  "DES";
+		try{
+			android.util.Log.d("cipherName-97", javax.crypto.Cipher.getInstance(cipherName97).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException f){
+		}
 		menu.add(Menu.NONE, 1, Menu.NONE, R.string.context_action_launch);
 		
 		ExpandableListContextMenuInfo info = (ExpandableListContextMenuInfo)menuInfo;
@@ -82,6 +102,11 @@ public class AllTasksListFragment extends Fragment implements AllTasksListAsyncP
 	
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
+		String cipherName98 =  "DES";
+		try{
+			android.util.Log.d("cipherName-98", javax.crypto.Cipher.getInstance(cipherName98).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException f){
+		}
 		ExpandableListContextMenuInfo info = (ExpandableListContextMenuInfo)item.getMenuInfo();
 		ExpandableListView list = (ExpandableListView) getView().findViewById(R.id.expandableListView1);
 		
@@ -124,9 +149,24 @@ public class AllTasksListFragment extends Fragment implements AllTasksListAsyncP
 
 	@Override
 	public void onProviderFininshed(AsyncProvider<AllTasksListAdapter> task, AllTasksListAdapter value) {
+		String cipherName99 =  "DES";
+		try{
+			android.util.Log.d("cipherName-99", javax.crypto.Cipher.getInstance(cipherName99).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException f){
+		}
 		try {
+			String cipherName100 =  "DES";
+			try{
+				android.util.Log.d("cipherName-100", javax.crypto.Cipher.getInstance(cipherName100).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException f){
+			}
 			this.list.setAdapter(value);
 		} catch (Exception e) {
+			String cipherName101 =  "DES";
+			try{
+				android.util.Log.d("cipherName-101", javax.crypto.Cipher.getInstance(cipherName101).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException f){
+			}
 			Toast.makeText(this.getActivity(), R.string.error_tasks, Toast.LENGTH_SHORT).show();
 		}		
 	}
